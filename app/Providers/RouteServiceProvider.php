@@ -37,4 +37,16 @@ class RouteServiceProvider extends ServiceProvider
                 ->group(base_path('routes/web.php'));
         });
     }
+
+    public function map(): void
+    {
+        $this->mapModulesRoutes();
+    }
+
+    protected function mapModulesRoutes(): void
+    {
+        // Use the middleware 'web' if you're writing a Web Application
+        Route::middleware('api')
+            ->group(base_path('routes/modules.php'));
+    }
 }

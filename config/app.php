@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Facade;
 use Illuminate\Support\ServiceProvider;
+use Modules\Admin\Providers\AdminServiceProvider;
 
 return [
 
@@ -56,16 +57,6 @@ return [
     */
 
     'url' => env('APP_URL', 'http://localhost'),
-
-    'frontend_url' => env('FRONTEND_URL', 'http://localhost:3000'),
-
-    'frontend_url' => env('FRONTEND_URL', 'http://localhost:3000'),
-
-    'frontend_url' => env('FRONTEND_URL', 'http://localhost:3000'),
-
-    'frontend_url' => env('FRONTEND_URL', 'http://localhost:3000'),
-
-    'frontend_url' => env('FRONTEND_URL', 'http://localhost:3000'),
 
     'frontend_url' => env('FRONTEND_URL', 'http://localhost:3000'),
 
@@ -180,6 +171,8 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        Spatie\Permission\PermissionServiceProvider::class,
+        AdminServiceProvider::class,
     ])->toArray(),
 
     /*
